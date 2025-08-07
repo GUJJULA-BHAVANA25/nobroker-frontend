@@ -1,0 +1,281 @@
+/* styles/property.module.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .loadingContainer,
+  .errorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .errorContainer {
+    color: #e74c3c;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #4a90e2;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 15px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .propertyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .propertyTitle {
+    font-size: 28px;
+    color: #2c3e50;
+    margin: 0;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .priceBadge {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .forType {
+    font-size: 16px;
+    margin-left: 5px;
+    font-weight: normal;
+  }
+  
+  .galleryContainer {
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mainImage {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .mainImage img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .mainImage:hover img {
+    transform: scale(1.02);
+  }
+  
+  .thumbnailContainer {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    overflow-x: auto;
+  }
+  
+  .thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+  }
+  
+  .thumbnail.activeThumbnail {
+    opacity: 1;
+    border-color: #4a90e2;
+  }
+  
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .detailsContainer {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .detailsSection {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sectionTitle {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+  }
+  
+  .detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .detailsCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detailsTitle {
+    font-size: 20px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detailsList {
+    display: grid;
+    gap: 15px;
+  }
+  
+  .detailItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .detailLabel {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .detailValue {
+    color: #555;
+    text-align: right;
+  }
+  
+  .contactSection {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contactBox {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .contactText {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  
+  .contactButton {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .contactButton:hover {
+    background-color: #3a7bc8;
+  }
+  
+  .noContact {
+    color: #6c757d;
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .mainImage {
+      height: 350px;
+    }
+  
+    .propertyTitle {
+      font-size: 24px;
+    }
+  
+    .priceBadge {
+      font-size: 18px;
+      padding: 10px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 15px;
+    }
+  
+    .mainImage {
+      height: 250px;
+    }
+  
+    .propertyHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .sectionTitle {
+      font-size: 20px;
+    }
+  
+    .detailsCard {
+      padding: 20px;
+    }
+  }
+  
